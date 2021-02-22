@@ -1,5 +1,6 @@
 import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-book',
@@ -24,5 +25,14 @@ export class BookComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges) {
     // console.log(this.amount);
     // console.log(changes['amount'].currentValue);
+  }
+
+  alertContinue(total: Number){
+    console.log(total);
+    Swal.fire({  
+      icon: 'info',  
+      title: 'Continuar compra...',  
+      text: 'Agregaste $' + total + ' al carrito de compras.'
+    })  
   }
 }

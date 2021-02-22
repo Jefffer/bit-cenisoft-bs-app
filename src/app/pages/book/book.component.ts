@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-book',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent implements OnInit {
+  bookForm: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    console.log('test')
+    this.bookForm = this.formBuilder.group({
+      amount: ['', ]
+    });
   }
+
+  updateTotal() {
+  }
+
+  unitValue = 80000;
+  total = this.unitValue;
 
 }

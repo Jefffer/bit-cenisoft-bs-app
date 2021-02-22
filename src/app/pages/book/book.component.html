@@ -19,18 +19,18 @@
 
                 <div class="row" id="book-info-container">                    
                     <div class="col">
-                        <p class="font-weight-bold text-info">Valor Unitario $50.000,00</p>
-                        <form action="" class="">
+                        <p class="font-weight-bold text-info">Valor Unitario {{unitValue | currency}}</p>
+                        <form id="bookForm" action="" class="" [formGroup]="bookForm">
                             <div class="form-group mb-2 d-flex">
                                 <label for="" class="col-form-label mr-3 font-weight-bold">Cantidad </label>
                                 <div class="">
-                                    <input type="number" class="form-control " value="1">
+                                    <input id="amount" type="number" class="form-control" formControlName="amount" value="1">
                                 </div>
                             </div>
                             <hr>
                             <div class="form-group row mb-2">
                                 <div class="col">
-                                    <h3 class="my-blue font-weight-bold">Total $ 50.000,00</h3>
+                                    <h3 class="my-blue font-weight-bold">Total {{total | currency}}</h3>
                                 </div>
                                 <div class="col d-flex align-middle">
                                     <button type="button" id="car-btn" class="font-weight-bold btn btn-info">

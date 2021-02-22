@@ -25,5 +25,4 @@ export class BookComponent implements OnInit {
     // console.log(this.amount);
     // console.log(changes['amount'].currentValue);
   }
-
 }

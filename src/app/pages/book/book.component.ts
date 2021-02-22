@@ -11,13 +11,11 @@ export class BookComponent implements OnInit {
   bookForm: FormGroup;
   amount = 1;
   unitValue = 60000;
-  total = this.unitValue ;
 
   constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void {    
-    console.log('test')
-    // console.log(this.amount);
+  ngOnInit(): void {
+    console.log(this.amount);
     this.bookForm = this.formBuilder.group({
       amount: ['', ]
     });
@@ -25,13 +23,7 @@ export class BookComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges) {
     // console.log(this.amount);
-
     // console.log(changes['amount'].currentValue);
   }
-
-  updateTotal() {
-  }
-
-  
 
 }

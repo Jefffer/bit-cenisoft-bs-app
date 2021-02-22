@@ -27,12 +27,13 @@ export class BookComponent implements OnInit {
     // console.log(changes['amount'].currentValue);
   }
 
-  alertContinue(total: Number){
-    console.log(total);
+  alertContinue(myAmount: number, myUnitValue: number){
+    let myTotal = myAmount * myUnitValue;
+    console.log(myTotal);
     Swal.fire({  
       icon: 'info',  
-      title: 'Continuar compra...',  
-      text: 'Agregaste $' + total + ' al carrito de compras.'
+      title: 'Producto agregado...',  
+      text: 'Agregaste ' + myAmount + ' producto(s) de $' + myUnitValue + ' cada uno, al carrito de compras. Para un total de $' + myTotal
     })  
   }
 }

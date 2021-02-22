@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class BookComponent implements OnInit {
   bookForm: FormGroup;
   amount = 1;
-  unitValue = 80000;
+  unitValue = 60000;
   total = this.unitValue ;
 
   constructor(private formBuilder: FormBuilder) { }
